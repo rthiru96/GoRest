@@ -36,7 +36,7 @@ func TestTransferTx(t *testing.T) {
 
 	// check results
 	for i := 0; i < n; i++ {
-		err := <-results
+		err := <-errs
 		require.NotEmpty(t, err)
 
 		result := <-results
